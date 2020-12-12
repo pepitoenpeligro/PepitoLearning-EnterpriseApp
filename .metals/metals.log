@@ -1,0 +1,12 @@
+2020.12.05 15:07:26 INFO  Started: Metals version 0.9.7 in workspace '/Users/pp/eclipse-workspace/jpacruc' for client vscode.
+2020.12.05 15:07:31 INFO  time: initialize in 5.62s
+2020.12.05 15:07:33 WARN  Build server is not auto-connectable.
+2020.12.05 16:43:35 INFO  shutting down Metals
+2020.12.09 22:57:08 INFO  Started: Metals version 0.9.7 in workspace '/Users/pp/eclipse-workspace/jpacruc' for client vscode.
+2020.12.09 22:57:12 INFO  time: initialize in 3.49s
+2020.12.09 22:57:12 WARN  Build server is not auto-connectable.
+2020.12.09 22:57:13 INFO  skipping build import with status 'Requested'
+2020.12.09 23:01:02 INFO  shutting down Metals
+2020.12.12 15:46:16 INFO  Started: Metals version 0.9.7 in workspace '/Users/pp/eclipse-workspace/jpacruc' for client vscode.
+2020.12.12 15:46:20 INFO  time: initialize in 3.34s
+2020.12.12 15:46:20 WARN  Build server is not auto-connectable.

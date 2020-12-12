@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width" />
+
+<title>Song Manager</title>
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+<script type="application/javascript" src="js/jquery.js"></script>
+<script type="application/javascript" src="js/bootstrap/bootstrap.js"></script>
+</head>
+<body>
+	<h1>Songs Manager</h1>
+	<header></header>
+
+	<div class="row justify-content-center">
+
+		<div class="col-auto">
+			<h4>Songs List {GET, DELETE}</h4>
+			<div id="song_table" class="table table-responsive table-striped"></div>
+		</div>
+	</div>
+
+
+
+	<div class="row justify-content-center">
+		<div class="col-auto">
+			<h4>Songs Adder {POST}</h4>
+			<div id="song_adder" class="text-center">
+				<form id="formAddSong" method="POST">
+					
+					<div class="form-row">
+					<div class="col">
+						<label for="title">Title</label> 
+						<input
+							type="text" class="form-control" id="title"
+							aria-describedby="emailHelp" placeholder="A un metro y medio de ti">
+					</div>
+					<div class="col">
+						<label for="album">Album</label> 
+						<input
+							type="text" class="form-control" id="album"
+							placeholder="A un metro y medio de ti">
+					
+					</div>
+					<div class="col">
+						<label for="artist">Artist</label> 
+						<input
+							type="text" class="form-control" id="artist"
+							placeholder="Ladilla Rusa">
+					</div>
+
+					<div class="col">
+						<label for="duration">Duration</label> 
+						<input
+							type="text" class="form-control" id="duration"
+							placeholder="Duration">
+					
+					</div>
+					<button type="submit"  class="btn btn-primary">Save Song</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	
+	<script type="application/javascript" src="js/core/songs.js"></script>
+	
+</body>
+</html>

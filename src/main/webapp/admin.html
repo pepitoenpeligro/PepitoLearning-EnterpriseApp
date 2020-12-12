@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>PepitoLearning</title>
+
+<link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+
+<!-- Open Sans -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link type="text/css" rel="stylesheet" href="css/core/styles.css">
+<link type="text/css" rel="stylesheet" href="css/core/admin.css">
+
+</head>
+
+
+
+<body>
+
+    <header>
+		<div class="header-content">
+			<div class="container__navbar">
+				<nav class="navbar">
+					<input type="checkbox" id="check"> <label for="check"
+						class="checkbtn" id="checkbtn"> <i class="fas fa-bars"></i>
+					</label> <img src="imgs/icon5.png" alt="icon of app"
+						onclick="window.location='http://www.github.com/pepitoenpeligro';">
+
+					<ul id="ul-events">
+
+
+						<li>
+							<div class="navbar-btn-signinup">
+								<a id="btn-Back" class="buttonSignin"
+									href="#index.html">Back Normal User</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+
+			<div id="myModal" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<span class="close">&times;</span>
+						<h2>Shopping Cart</h2>
+					</div>
+					<div class="modal-body" id="shoppingCartBody">
+
+					</div>
+					<!-- <div class="modal-footer">
+						<h3>Modal Footer</h3>
+					</div> -->
+				</div>
+
+			</div>
+
+
+
+			<div class="form-container-parent-parent"
+				id="form-container-parent-parent">
+				<div class="form-container-parent" id="form-container-parent">
+					<div class="form-container sign-up-container">
+						<form onsubmit="return false;" name="signin-formular-name">
+							<h1>Create Account</h1>
+							<span>or use your email for registration</span> <input
+								id="signup-name" type="text" placeholder="Name" /> <input
+								id="signup-email" type="email" placeholder="Email" /> <input
+								id="signup-pass" type="password" placeholder="Password" />
+							<button type="button" id="btn-signup">Sign Up</button>
+						</form>
+					</div>
+					<div class="form-container sign-in-container">
+						<form onsubmit="return false;" name="signin-formular-name">
+							<h1>Sign in</h1>
+
+							<span>or use your PepitoLearning account</span> <input
+								id="signin-email" type="email" placeholder="Email" /> <input
+								id="signin-pass" type="password" placeholder="Password" />
+							<button type="button" id="btn-signin">Sign In</button>
+						</form>
+					</div>
+					<div class="overlay-container">
+						<div class="overlay">
+							<div class="overlay-panel overlay-left">
+								<h1>Welcome Back!</h1>
+								<p>To keep connected with us please login with your personal
+									info</p>
+								<button type="button" class="ghost" id="signIn">Sign In</button>
+							</div>
+							<div class="overlay-panel overlay-right">
+								<h1>Hello, Friend!</h1>
+								<p>Enter your personal details and start journey with us</p>
+								<button type="button" class="ghost" id="signUp">Sign Up</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- Navigation -->
+
+
+		
+	</header>
+	
+
+	<div class="table-parent" id="table-parent">
+		<div class="title__table">
+			<h1>Product Management</h1>
+			<p>List Actual Products in our System</p>
+		</div>
+
+		<div class="container__table" id="container__table__admin">
+			<!-- Generatedby request to api -->
+		</div>
+
+		<div class="title__table">
+	
+			<p>Add new product</p>
+
+			
+
+		</div>
+
+		<div class="container__table" id="container__table__admin_add">
+			<div id="song_adder" class="text-center">
+				<form id="formAddProduct" method="POST">
+					
+					<div class="form-row">
+					<div class="col">
+						<label for="title">Product</label> 
+						<input
+							type="text" class="form-control" id="title_product_add"
+							aria-describedby="emailHelp" placeholder="lessons">
+					</div>
+					<div class="col">
+						<label for="album">Description</label> 
+						<input
+							type="text" class="form-control" id="description_product_add"
+							placeholder="Pack of 2 individual and personalized lessons">
+					
+					</div>
+					<div class="col">
+						<label for="artist">Price</label> 
+						<input
+							type="text" class="form-control" id="price_product_add"
+							placeholder="10">
+					</div>
+					<button type="submit"  class="btn btn-primary">Save Product</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="wave3">
+
+		<!-- https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections -->
+		<div style="height: 150px; overflow: hidden;">
+			<svg viewBox="0 0 500 150" preserveAspectRatio="none"
+				style="height: 100%; width: 100%;">
+				<path
+					d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+					style="stroke: none; fill: #0163BC;"></path></svg>
+		</div>
+    </div>
+
+
+	<div class="table_logs">
+		<div id="table_user_logs">
+			<table>
+				<div class="title__table">
+					<h1>User Log</h1>
+				</div>
+				<thead>
+				  <tr>
+					<th scope="col">Timestamp</th>
+					<th scope="col">Message</th>
+				  </tr>
+				</thead>
+				<tbody id="ctluser">
+				</tbody>
+			  </table>
+		</div>
+
+
+		<div id="table_products_logs">
+			<table>
+				<div class="title__table">
+					<h1>Products Logs</h1>
+				</div>
+				<thead>
+				  <tr>
+					<th scope="col">Timestamp</th>
+					<th scope="col">Message</th>
+				  </tr>
+				</thead>
+				<tbody id="ctlproduct">
+				</tbody>
+			  </table>
+		</div>
+
+
+		<div id="table_cart_logs">
+			<table>
+				<div class="title__table">
+					<h1>Cart Logs</h1>
+				</div>
+				<thead>
+				  <tr>
+					<th scope="col">Timestamp</th>
+					<th scope="col">Message</th>
+				  </tr>
+				</thead>
+				<tbody id="ctlcart">
+				</tbody>
+			  </table>
+		</div>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/core/admin.js"></script>
+</body>
+
+
+<footer>
+	<div class="footer-container">
+		<div class="footer-left-col">
+			<img src="imgs/icon3.png" alt="" class="footer-logo">
+			<div class="footer-social-media">
+				<a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://twitter.com"><i class="fab fa-twitter"></i></a> <a
+					href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+				<a href="https://es.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<p class="rights-text">© 2020 Created By</p>
+			<p class="rights-text">José Antonio Córdoba Gómez
+				(joseinn@correo.ugr.es)</p>
+		</div>
+
+		<div class="footer-right-col">
+			<h1>Our Newsletter</h1>
+			<div class="footer-border"></div>
+			<p>Enter Your Email to get our news and updates.</p>
+			<form class="footer-newsletter-form" onsubmit="return false;">
+				<input id="footer-input-email" type="text" class="footer-txtb"
+					placeholder="Enter Your Email">
+				<!-- <input type="submit" class="footer-btn" value="submit"> -->
+				<button onclick="sendMessage('You are now in our email-lists')">Inscribe
+					me!</button>
+
+			</form>
+		</div>
+	</div>
+</footer>
+
+
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>PepitoLearning</title>
+
+<link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+
+<!-- Open Sans -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap"
+	rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link type="text/css" rel="stylesheet" href="css/core/styles.css">
+
+
+</head>
+
+<body>
+
+	<!-- Alert -->
+	<div class="alert-container-parent">
+		<div class="alert-container">
+			<div class="alert hide" id="alert">
+				<span class="fas fa-exclamation-circle"></span> <span class="msg"
+					id="alert-msg-content">Warning: This is a warning alert!</span>
+				<div class="close-btn" id="close-btn">
+					<span> X </span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<header>
+		<div class="header-content">
+			<div class="container__navbar">
+				<nav class="navbar">
+					<input type="checkbox" id="check"> <label for="check"
+						class="checkbtn" id="checkbtn"> <i class="fas fa-bars"></i>
+					</label> <img src="imgs/icon5.png" alt="icon of app"
+						onclick="window.location='http://www.github.com/pepitoenpeligro';">
+
+					<ul id="ul-events">
+
+						<li><a href="#">HOME</a></li>
+						<li><a href="#table-parent">PRICES</a></li>
+						<li><img class="hideshoppingcart" src="imgs/cart-1.png" alt="icon of app"
+							id="shoppingCartButton">
+						</li>
+						<li><img class="hideadminicon" src="imgs/admin.png" alt="icon of app"
+							id="adminButton">
+						</li>
+						<li>
+							<div class="navbar-btn-signinup">
+								<a id="btn-signinup" class="buttonSignin"
+									href="#form-container-parent-parent">SignIn-Up</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+
+			<div id="myModal" class="modal">
+
+				<!-- Modal content -->
+				<div class="modal-content">
+					<div class="modal-header">
+						<span class="close">&times;</span>
+						<h2>Shopping Cart</h2>
+					</div>
+					<div class="modal-body" id="shoppingCartBody">
+
+					</div>
+					<!-- <div class="modal-footer">
+						<h3>Modal Footer</h3>
+					</div> -->
+				</div>
+
+			</div>
+
+
+
+			<div class="form-container-parent-parent"
+				id="form-container-parent-parent">
+				<div class="form-container-parent" id="form-container-parent">
+					<div class="form-container sign-up-container">
+						<form onsubmit="return false;" name="signin-formular-name">
+							<h1>Create Account</h1>
+							<span>or use your email for registration</span> <input
+								id="signup-name" type="text" placeholder="Name" /> <input
+								id="signup-email" type="email" placeholder="Email" /> <input
+								id="signup-pass" type="password" placeholder="Password" />
+							<button type="button" id="btn-signup">Sign Up</button>
+						</form>
+					</div>
+					<div class="form-container sign-in-container">
+						<form onsubmit="return false;" name="signin-formular-name">
+							<h1>Sign in</h1>
+
+							<span>or use your PepitoLearning account</span> <input
+								id="signin-email" type="email" placeholder="Email" /> <input
+								id="signin-pass" type="password" placeholder="Password" />
+							<button type="button" id="btn-signin">Sign In</button>
+						</form>
+					</div>
+					<div class="overlay-container">
+						<div class="overlay">
+							<div class="overlay-panel overlay-left">
+								<h1>Welcome Back!</h1>
+								<p>To keep connected with us please login with your personal
+									info</p>
+								<button type="button" class="ghost" id="signIn">Sign In</button>
+							</div>
+							<div class="overlay-panel overlay-right">
+								<h1>Hello, Friend!</h1>
+								<p>Enter your personal details and start journey with us</p>
+								<button type="button" class="ghost" id="signUp">Sign Up</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Texts -->
+			<div class="container">
+				<div class="textos">
+					<h1>PepitoLearning</h1>
+					<h2>Online Learning Plattform</h2>
+					<a href="http://www.github.com/pepitoenpeligro">Contact Us Now!</a>
+				</div>
+				<div class="headerimg">
+					<img src="imgs/header-icon.png" alt="">
+				</div>
+
+			</div>
+		</div>
+		<!-- Navigation -->
+    </header>
+    
+
+
+
+    <div id="googleMap" style="width:100%;height:400px;"> </div> 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA92-INHdwAjwd8BAk_yv2MLe20epqTN5o"></script>
+    <script>
+        google.maps.event.addDomListener(window, 'load', () => {
+        	const myLatLng = { lat: 37.197055, lng: -3.6245507 };
+            var mapProp= {
+                center:new google.maps.LatLng(37.197055,-3.6245507),
+                zoom:19,
+            };
+
+            
+            let map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            const marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map
+              });
+            marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+              
+        });   
+      </script>
+
+
+
+
+
+	<!-- Price Table -->
+
+	<div class="table-parent" id="table-parent">
+		<div class="title__table">
+			<h1>Princing</h1>
+			<p>Our plans address the diverse learning needs of your
+				organization, no matter what size you are.</p>
+		</div>
+
+		<div class="container__table" id="container__table">
+			<!-- Generatedby request to api -->
+		</div>
+	</div>
+
+
+
+	<div class="wave3">
+
+		<!-- https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections -->
+		<div style="height: 150px; overflow: hidden;">
+			<svg viewBox="0 0 500 150" preserveAspectRatio="none"
+				style="height: 100%; width: 100%;">
+				<path
+					d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+					style="stroke: none; fill: #0163BC;"></path></svg>
+		</div>
+    </div>
+    
+    
+
+
+
+	<div class="video_parent">
+		<div class="textvideo">
+			<h1>Video Gallery</h1>
+        </div>
+        
+       
+
+
+
+
+		<div class="container-video">
+
+			<section class="cards">
+
+				<!-- Model of a card -->
+				<div class="card">
+					<div class="card__image-container">
+						<video poster="imgs/logo_video_card.png" controls>
+							<source src="videos/britney.mp4" type="video/mp4">
+
+						</video>
+
+
+					</div>
+					<div class="card__content ">
+						<p class="card__title text--medium ">Work Uhhhh</p>
+						<div class="card__info ">
+							<p class="text--medium ">10 Min</p>
+							<p class="card__author text--medium ">Britney Spears</p>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Model of a card -->
+				<div class="card">
+					<div class="card__image-container">
+						<video poster="imgs/logo_video_card.png" controls>
+							<source src="videos/britney.mp4" type="video/mp4">
+
+
+						</video>
+
+
+					</div>
+					<div class="card__content ">
+						<p class="card__title text--medium ">Video 2</p>
+						<div class="card__info ">
+							<p class="text--medium ">10 Min</p>
+							<p class="card__author text--medium ">Britney Spears</p>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Model of a card -->
+				<div class="card">
+					<div class="card__image-container">
+						<video poster="imgs/logo_video_card.png" controls>
+							<source src="videos/britney.mp4" type="video/mp4">
+						</video>
+
+
+					</div>
+					<div class="card__content ">
+						<p class="card__title text--medium ">Video 3</p>
+						<div class="card__info ">
+							<p class="text--medium ">10 Min</p>
+							<p class="card__author text--medium ">Britney Spears</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Model of a card -->
+				<div class="card">
+					<div class="card__image-container">
+						<video poster="imgs/logo_video_card.png" controls>
+							<source src="videos/britney.mp4" type="video/mp4">
+						</video>
+
+
+					</div>
+					<div class="card__content ">
+						<p class="card__title text--medium ">Video 4</p>
+						<div class="card__info ">
+							<p class="text--medium ">10 Min</p>
+							<p class="card__author text--medium ">Britney Spears</p>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- Model of a card -->
+				<div class="card">
+					<div class="card__image-container">
+						<video poster="imgs/logo_video_card.png" controls>
+							<source src="videos/britney.mp4" type="video/mp4">
+
+						</video>
+
+
+					</div>
+					<div class="card__content">
+						<p class="card__title text--medium ">Video 5</p>
+						<div class="card__info ">
+							<p class="text--medium ">10 Min</p>
+							<p class="card__author text--medium ">Britney Spears</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Model of a card -->
+				<div class="card">
+					<div class="card__image-container">
+						<video poster="imgs/logo_video_card.png" controls>
+							<source src="videos/britney.mp4" type="video/mp4">
+
+						</video>
+
+
+					</div>
+					<div class="card__content ">
+						<p class="card__title text--medium ">Video 6</p>
+						<div class="card__info ">
+							<p class="text--medium ">10 Min</p>
+							<p class="card__author text--medium ">Britney Spears</p>
+						</div>
+					</div>
+				</div>
+
+			</section>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="js/core/index.js"></script>
+</body>
+
+
+<footer>
+	<div class="footer-container">
+		<div class="footer-left-col">
+			<img src="imgs/icon3.png" alt="" class="footer-logo">
+			<div class="footer-social-media">
+				<a href="https://facebook.com"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://twitter.com"><i class="fab fa-twitter"></i></a> <a
+					href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+				<a href="https://es.linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<p class="rights-text">© 2020 Created By</p>
+			<p class="rights-text">José Antonio Córdoba Gómez
+				(joseinn@correo.ugr.es)</p>
+		</div>
+
+		<div class="footer-right-col">
+			<h1>Our Newsletter</h1>
+			<div class="footer-border"></div>
+			<p>Enter Your Email to get our news and updates.</p>
+			<form class="footer-newsletter-form" onsubmit="return false;">
+				<input id="footer-input-email" type="text" class="footer-txtb"
+					placeholder="Enter Your Email">
+				<!-- <input type="submit" class="footer-btn" value="submit"> -->
+				<button onclick="sendMessage('You are now in our email-lists')">Inscribe
+					me!</button>
+
+			</form>
+		</div>
+	</div>
+</footer>
+
+</html>

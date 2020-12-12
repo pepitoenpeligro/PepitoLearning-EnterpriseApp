@@ -32,7 +32,7 @@ public class User {
 	private String password;
 	
 	@Column(name="admin", nullable = false)
-	private boolean admin = false;
+	private boolean admin = true;
 
 	public Long getId() {
 		return id;

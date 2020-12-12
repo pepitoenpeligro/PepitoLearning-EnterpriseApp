@@ -1,0 +1,38 @@
+# docker-compose build app
+# docker-compose up
+
+version: "3"
+services:
+  app:
+    container_name: app
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mydatabase
+    networks:
+      - proxynet
+
+  mydatabase:
+    container_name: mydatabase
+    image: mysql:5.7.32
+    restart: always
+    ports:
+      #- "6603:3306"
+      #- "3333:3306"
+      - 3306:3306
+    environment:
+      - MYSQL_DATABASE=practica4_db
+      - MYSQL_ROOT_PASSWORD=201196
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=201196
+    # healthcheck:
+    #   test: mysqladmin ping -h 127.0.0.1 -u $$MYSQL_USER --password=$$MYSQL_PASSWORD
+    #   interval: 2s
+    #   timeout: 20s
+    #   retries: 10
+      
+
+networks:
+  proxynet:
+    name: custom_network

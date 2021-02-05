@@ -93,9 +93,12 @@ public class RestServiceUsers {
 				return Response.ok().status(Status.ACCEPTED).entity(json).header("Access-Control-Allow-Origin", "*")
 		                .header("Access-Control-Allow-Methods", "POST, GET, PUT, UPDATE, OPTIONS")
 		                .header("Access-Control-Allow-Headers", "Content-Type, Accept, X-Requested-With").build();
-			} catch (IOException e1) {
+			} catch (IOException e1) {	
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
+				return Response.status(Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "POST, GET, PUT, UPDATE, OPTIONS")
+                .header("Access-Control-Allow-Headers", "Content-Type, Accept, X-Requested-With").build();
 			}
 		}
 		return Response.status(Status.NOT_FOUND).header("Access-Control-Allow-Origin", "*")

@@ -1,0 +1,16 @@
+com/pepe/models/User.class
+com/pepe/api/RestServiceProducts.class
+com/pepe/dao/UserDao.class
+com/pepe/service/CORSFilter.class
+com/pepe/dao/ShoppingCartDao.class
+com/pepe/api/RestServiceShopCart.class
+com/pepe/models/CartItem.class
+com/pepe/models/Log.class
+com/pepe/models/JPAUtil.class
+com/pepe/models/ShoppingCart.class
+com/pepe/api/RestServiceLogs.class
+com/pepe/api/RestServiceUsers.class
+com/pepe/dao/ProductDao.class
+com/pepe/dao/LogDao.class
+com/pepe/models/Product.class
+com/pepe/models/ProductUser.class

@@ -1,6 +1,6 @@
 "use strict";
 
-const BASE_URL  = 'http://localhost:8080';
+const BASE_URL  = 'http://pepecordoba.com:8080';
 const APP       = 'jpacruc';
 const API       = 'webservices';
 
@@ -104,7 +104,8 @@ async function getProductsFromShoppingCart(){
 		method: 'POST',
 		mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin':'*'
 		},
 		body:JSON.stringify({email: email})
 
@@ -335,7 +336,8 @@ async function saveUser(user) {
 		method: 'POST',
 		mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin':'*'
 		},
 		body: JSON.stringify(user)
 	});
@@ -389,7 +391,8 @@ async function getProducts() {
 		method: 'GET',
 		mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin':'*'
 		}
 	});
 	return response.json();
@@ -474,7 +477,8 @@ async function buy(id){
         method: 'POST',
         mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin':'*'
 		},
         body: JSON.stringify({ email: email, idProducto: parseInt(id) })
     }).then((resp) => {
@@ -497,7 +501,8 @@ async function doSignIn(email, password) {
 		method: 'POST',
 		mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			'Access-Control-Allow-Origin':'*'
 		},
 		body: JSON.stringify({ email: email, password: password })
 	});

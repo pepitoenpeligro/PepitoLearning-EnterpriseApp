@@ -1,4 +1,4 @@
-const BASE_URL  = 'http://localhost:8080';
+const BASE_URL  = 'http://pepecordoba.com:8080';
 const APP       = 'jpacruc';
 const API       = 'webservices';
 
@@ -166,7 +166,8 @@ async function getLogUser(){
 		method: 'GET',
 		mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
 		}
 	});
 	return response.json();
@@ -179,7 +180,8 @@ async function getLogProducts(){
 		method: 'GET',
 		mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
 		}
 	});
 	return response.json();
@@ -191,7 +193,8 @@ async function getLogCart(){
 		method: 'GET',
 		mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
 		}
 	});
 	return response.json();
@@ -204,7 +207,8 @@ async function getProducts() {
 		method: 'GET',
 		mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
 		}
 	});
 	return response.json();
@@ -218,7 +222,8 @@ async function addProduct(name, description, price){
         method: 'POST',
         mode: 'cors', headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
         },
         body: JSON.stringify({name, description, price})
     }).then((result) => {
@@ -236,7 +241,8 @@ async function remove(id){
         method: 'DELETE',
         mode: 'cors', headers: {
 			'Accept': 'application/json',
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin':'*'
 		}
     }).then((result) => {
         console.log("Resultado de la operacion: " + result);

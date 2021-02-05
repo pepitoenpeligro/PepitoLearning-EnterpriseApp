@@ -1,0 +1,16 @@
+/home/fer227/jpacruc/src/main/java/com/pepe/api/RestServiceLogs.java
+/home/fer227/jpacruc/src/main/java/com/pepe/models/ShoppingCart.java
+/home/fer227/jpacruc/src/main/java/com/pepe/dao/LogDao.java
+/home/fer227/jpacruc/src/main/java/com/pepe/models/Product.java
+/home/fer227/jpacruc/src/main/java/com/pepe/api/RestServiceShopCart.java
+/home/fer227/jpacruc/src/main/java/com/pepe/api/RestServiceProducts.java
+/home/fer227/jpacruc/src/main/java/com/pepe/models/ProductUser.java
+/home/fer227/jpacruc/src/main/java/com/pepe/api/RestServiceUsers.java
+/home/fer227/jpacruc/src/main/java/com/pepe/models/User.java
+/home/fer227/jpacruc/src/main/java/com/pepe/models/Log.java
+/home/fer227/jpacruc/src/main/java/com/pepe/models/CartItem.java
+/home/fer227/jpacruc/src/main/java/com/pepe/dao/ProductDao.java
+/home/fer227/jpacruc/src/main/java/com/pepe/dao/ShoppingCartDao.java
+/home/fer227/jpacruc/src/main/java/com/pepe/service/CORSFilter.java
+/home/fer227/jpacruc/src/main/java/com/pepe/dao/UserDao.java
+/home/fer227/jpacruc/src/main/java/com/pepe/models/JPAUtil.java
